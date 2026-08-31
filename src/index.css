@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #C4AD8A;
+    color: #231b14;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.08em;
+  }
+
+  .font-editorial {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+/* Custom Immersive UI scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #C4AD8A;
+}
+::-webkit-scrollbar-thumb {
+  background: #8e7552;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6e583c;
+}
+
+/* Immersive background & gradient utility */
+.immersive-ambient-glow {
+  background-image: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #1c1510 0%, #3e2d1f 50%, #5c432d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to bottom, rgba(142, 117, 82, 0.7), rgba(142, 117, 82, 0.15)) 1;
+}
+
+.tobacco-gradient-bg {
+  background: radial-gradient(circle at 50% 20%, #d8c3a3 0%, #C4AD8A 60%, #b39a75 100%);
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
