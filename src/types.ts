@@ -1,6 +1,6 @@
 export type Language = 'pt' | 'en' | 'es';
 
-export type PageId = 'home' | 'historia' | 'sobre' | 'processo' | 'produtos' | 'contato';
+export type PageId = 'home' | 'historia' | 'sobre' | 'legado' | 'processo' | 'produtos' | 'contato';
 
 export type CigarStrength = 'suave' | 'medio' | 'medio-forte' | 'forte';
 

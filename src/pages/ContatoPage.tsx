@@ -6,11 +6,13 @@ import {
   CheckCircle2,
   Instagram,
   Linkedin,
+  Youtube,
+  Facebook,
+  BookOpen,
   MapPin,
   Phone,
   Mail,
   Clock,
-  MessageSquare,
   ShieldCheck,
   Building,
 } from 'lucide-react';
@@ -49,8 +51,7 @@ export const ContatoPage: React.FC<ContatoPageProps> = ({ currentLang }) => {
       {/* Hero Header */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#06120d] border-b border-[#184030] text-center">
         <div className="max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
-            <MessageSquare className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
             <span>
               {currentLang === 'pt'
                 ? 'Atendimento Exclusivo'
@@ -313,7 +314,7 @@ export const ContatoPage: React.FC<ContatoPageProps> = ({ currentLang }) => {
                 {/* Instagram */}
                 <a
                   id="contact-instagram-action"
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/donaflorcigar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] border border-[#1d4b38] hover:border-[#d4b483] text-[#e5d9cc] hover:text-[#d4b483] transition-all flex items-center justify-between group"
@@ -324,7 +325,47 @@ export const ContatoPage: React.FC<ContatoPageProps> = ({ currentLang }) => {
                     </div>
                     <div>
                       <span className="font-bold text-xs block text-[#f5efe6]">Instagram</span>
-                      <span className="text-[10px] text-[#c5b8aa]">@menendezamerino</span>
+                      <span className="text-[10px] text-[#c5b8aa]">@donaflorcigar</span>
+                    </div>
+                  </div>
+                  <span className="text-xs text-[#d4b483] font-semibold group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                {/* Facebook */}
+                <a
+                  id="contact-facebook-action"
+                  href="https://www.facebook.com/DonaFlorCigar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] border border-[#1d4b38] hover:border-[#d4b483] text-[#e5d9cc] hover:text-[#d4b483] transition-all flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-2 bg-[#091a13] border border-[#1b4332] rounded-full text-[#d4b483]">
+                      <Facebook className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="font-bold text-xs block text-[#f5efe6]">Facebook</span>
+                      <span className="text-[10px] text-[#c5b8aa]">Dona Flor Cigar</span>
+                    </div>
+                  </div>
+                  <span className="text-xs text-[#d4b483] font-semibold group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                {/* YouTube */}
+                <a
+                  id="contact-youtube-action"
+                  href="https://www.youtube.com/@donaflorcigar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] border border-[#1d4b38] hover:border-[#d4b483] text-[#e5d9cc] hover:text-[#d4b483] transition-all flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-2 bg-[#091a13] border border-[#1b4332] rounded-full text-[#d4b483]">
+                      <Youtube className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="font-bold text-xs block text-[#f5efe6]">YouTube</span>
+                      <span className="text-[10px] text-[#c5b8aa]">@donaflorcigar</span>
                     </div>
                   </div>
                   <span className="text-xs text-[#d4b483] font-semibold group-hover:translate-x-1 transition-transform">→</span>
@@ -333,7 +374,7 @@ export const ContatoPage: React.FC<ContatoPageProps> = ({ currentLang }) => {
                 {/* LinkedIn */}
                 <a
                   id="contact-linkedin-action"
-                  href="https://www.linkedin.com"
+                  href="https://br.linkedin.com/company/menendez-amerino"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] border border-[#1d4b38] hover:border-[#d4b483] text-[#e5d9cc] hover:text-[#d4b483] transition-all flex items-center justify-between group"
@@ -348,6 +389,26 @@ export const ContatoPage: React.FC<ContatoPageProps> = ({ currentLang }) => {
                     </div>
                   </div>
                   <span className="text-xs text-[#d4b483] font-semibold group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+
+                {/* Blog Dona Flor (full width across 2 cols on tablet/desktop) */}
+                <a
+                  id="contact-blog-action"
+                  href="https://tapmoving.com/blogdonaflor/blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sm:col-span-2 p-3.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] border border-[#1d4b38] hover:border-[#d4b483] text-[#e5d9cc] hover:text-[#d4b483] transition-all flex items-center justify-between group"
+                >
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-2 bg-[#091a13] border border-[#1b4332] rounded-full text-[#d4b483]">
+                      <BookOpen className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="font-bold text-xs block text-[#f5efe6]">Blog Dona Flor</span>
+                      <span className="text-[10px] text-[#c5b8aa]">Artigos, cultura e novidades sobre o universo dos charutos</span>
+                    </div>
+                  </div>
+                  <span className="text-xs text-[#d4b483] font-semibold group-hover:translate-x-1 transition-transform">Acessar Blog →</span>
                 </a>
               </div>
             </div>

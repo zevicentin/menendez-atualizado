@@ -2,7 +2,7 @@ import React from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
 import { Logo } from './Logo';
-import { Instagram, Linkedin, ShieldAlert, Sparkles, Cookie, Phone, Mail, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Youtube, Facebook, BookOpen, ShieldAlert, Sparkles, Cookie, Phone, Mail, MapPin } from 'lucide-react';
 
 interface FooterProps {
   currentLang: Language;
@@ -41,31 +41,64 @@ export const Footer: React.FC<FooterProps> = ({
             </p>
 
             <div className="pt-2">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-[#d4b483] font-bold mb-2">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-[#d4b483] font-bold mb-2.5">
                 {t.footer.socialTitle}
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-2">
                 <a
                   id="footer-instagram-link"
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/donaflorcigar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-colors"
-                  aria-label="Instagram Oficial Menendez Amerino"
-                  title="Instagram"
+                  className="p-2.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-all hover:scale-105"
+                  aria-label="Instagram Dona Flor Cigar"
+                  title="Instagram: @donaflorcigar"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  id="footer-linkedin-link"
-                  href="https://www.linkedin.com"
+                  id="footer-facebook-link"
+                  href="https://www.facebook.com/DonaFlorCigar"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 rounded bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-colors"
-                  aria-label="LinkedIn Oficial Menendez Amerino"
-                  title="LinkedIn"
+                  className="p-2.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-all hover:scale-105"
+                  aria-label="Facebook Dona Flor Cigar"
+                  title="Facebook: Dona Flor Cigar"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a
+                  id="footer-youtube-link"
+                  href="https://www.youtube.com/@donaflorcigar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-all hover:scale-105"
+                  aria-label="YouTube Dona Flor Cigar"
+                  title="YouTube: @donaflorcigar"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+                <a
+                  id="footer-linkedin-link"
+                  href="https://br.linkedin.com/company/menendez-amerino"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-all hover:scale-105"
+                  aria-label="LinkedIn Menendez Amerino"
+                  title="LinkedIn: Menendez Amerino"
                 >
                   <Linkedin className="w-4 h-4" />
+                </a>
+                <a
+                  id="footer-blog-link"
+                  href="https://tapmoving.com/blogdonaflor/blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-lg bg-[#112a20] hover:bg-[#183d2e] text-[#d4b483] border border-[#1d4b38] hover:border-[#d4b483] transition-all hover:scale-105"
+                  aria-label="Blog Dona Flor"
+                  title="Blog Dona Flor"
+                >
+                  <BookOpen className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -99,6 +132,14 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-[#d4b483] transition-colors"
                 >
                   {t.nav.sobre}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNav('legado')}
+                  className="hover:text-[#d4b483] transition-colors"
+                >
+                  {t.nav.legado}
                 </button>
               </li>
               <li>
@@ -178,7 +219,12 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#d4b483] shrink-0 mt-0.5" />
-                <span>comercialexport@menendez.com.br</span>
+                <a
+                  href="mailto:contact@donaflorcigars.com"
+                  className="hover:text-[#d4b483] transition-colors"
+                >
+                  contact@donaflorcigars.com
+                </a>
               </div>
             </div>
           </div>

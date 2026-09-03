@@ -1,7 +1,6 @@
 import React from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import { Layers } from 'lucide-react';
 import preparacaoSolo from '../assets/images/preparacao-solo.jpg';
 import germinacao from '../assets/images/germinacao.jpg';
 import secagem from '../assets/images/secagem.jpg';
@@ -25,8 +24,7 @@ export const ProcessoPage: React.FC<ProcessoPageProps> = ({
       {/* Hero Header */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#06120d] border-b border-[#184030] text-center">
         <div className="max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
-            <Layers className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
             <span>{p.badgeTitle}</span>
           </div>
           <h1 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#f5efe6] uppercase tracking-tight">

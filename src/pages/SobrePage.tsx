@@ -1,9 +1,8 @@
 import React from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import { Users } from 'lucide-react';
+import plantioImg from '../assets/images/plantio.jpg';
 import estruturaImg from '../assets/images/estrutura.jpg';
-import donaflorCharutosImg from '../assets/images/donaflorCharutos.jpg';
 import marcenariaImg from '../assets/images/marcenaria.jpg';
 import mercadoImg from '../assets/images/mercado.jpg';
 
@@ -24,8 +23,7 @@ export const SobrePage: React.FC<SobrePageProps> = ({
       {/* Hero Header */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#06120d] border-b border-[#184030] text-center">
         <div className="max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
-            <Users className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
             <span>{s.badgeTitle}</span>
           </div>
           <h1 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#f5efe6] uppercase tracking-tight">
@@ -58,15 +56,35 @@ export const SobrePage: React.FC<SobrePageProps> = ({
         <div className="bg-[#091a13] border border-[#1b4332] rounded-xl p-8 sm:p-10 space-y-10">
           <div className="text-center space-y-3">
             <h2 className="font-serif-luxury text-2xl sm:text-4xl font-bold text-[#f5efe6] uppercase tracking-tight">
-{s.structureTitle}
+              {s.structureTitle}
             </h2>
             <div className="h-px w-16 bg-[#d4b483] mx-auto" />
           </div>
 
           <div className="space-y-6">
-            <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
-              {s.structureIntro}
-            </p>
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="space-y-4 flex-1">
+                <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+                  {s.structureIntro1}
+                </p>
+                <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+                  {s.structureIntro2}
+                </p>
+                <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+                  {s.structureIntro3}
+                </p>
+                <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+                  {s.structureIntro4}
+                </p>
+              </div>
+              <div className="w-full md:w-1/3 flex-shrink-0">
+                <img
+                  src={plantioImg}
+                  alt={s.plantioImgAlt}
+                  className="w-full h-56 md:h-full object-cover rounded-lg border border-[#1d4b38]"
+                />
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <img
@@ -79,19 +97,10 @@ export const SobrePage: React.FC<SobrePageProps> = ({
                 {s.structureText1}
               </p>
             </div>
+            <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+              {s.solarEnergyText}
+            </p>
             <div className="flex flex-col md:flex-row-reverse gap-6 items-center">
-              <div className="w-full md:w-1/3 flex-shrink-0">
-                <img
-                  src={donaflorCharutosImg}
-                  alt={s.donaflorImgAlt}
-                  className="w-full h-44 md:h-full object-cover rounded-lg border border-[#1d4b38]"
-                />
-              </div>
-              <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light flex-1">
-                {s.brandText3}
-              </p>
-            </div>
-            <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <img
                   src={marcenariaImg}
@@ -103,7 +112,7 @@ export const SobrePage: React.FC<SobrePageProps> = ({
                 {s.expansionText1}
               </p>
             </div>
-            <div className="flex flex-col md:flex-row-reverse gap-6 items-center">
+            <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <img
                   src={mercadoImg}
@@ -119,6 +128,17 @@ export const SobrePage: React.FC<SobrePageProps> = ({
               {s.structureText2}
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Citação de Destaque */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative py-8 px-6 sm:px-12 bg-[#091a13] border border-[#1b4332] rounded-xl text-center shadow-lg">
+          <div className="w-12 h-px bg-[#d4b483] mx-auto mb-4 opacity-70" />
+          <p className="font-serif-luxury text-lg sm:text-2xl md:text-3xl italic text-[#d4b483] tracking-wide leading-relaxed">
+            “{s.structureQuote}”
+          </p>
+          <div className="w-12 h-px bg-[#d4b483] mx-auto mt-4 opacity-70" />
         </div>
       </section>
     </div>

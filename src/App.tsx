@@ -8,6 +8,7 @@ import { CigarModal } from './components/CigarModal';
 import { HomePage } from './pages/HomePage';
 import { HistoriaPage } from './pages/HistoriaPage';
 import { SobrePage } from './pages/SobrePage';
+import { LegadoPage } from './pages/LegadoPage';
 import { ProcessoPage } from './pages/ProcessoPage';
 import { ProdutosPage } from './pages/ProdutosPage';
 import { ContatoPage } from './pages/ContatoPage';
@@ -135,6 +136,12 @@ export default function App() {
         )}
         {currentPage === 'sobre' && (
           <SobrePage
+            currentLang={currentLang}
+            onNavigate={handleNavigate}
+          />
+        )}
+        {currentPage === 'legado' && (
+          <LegadoPage
             currentLang={currentLang}
             onNavigate={handleNavigate}
           />

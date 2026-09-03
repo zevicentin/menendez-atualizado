@@ -1,8 +1,7 @@
 import React from 'react';
 import { Language, PageId, CigarProduct } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import { Sparkles, ArrowRight } from 'lucide-react';
-import heroBgImage from '../assets/images/hero_artisan_rolling_1787340515758.jpg';
+import heroBgImage from '../assets/images/hero-cigars.jpg';
 import donaFlorLogo from '../assets/images/Dona-Flor-Logo.png';
 import alonsoMenendezLogo from '../assets/images/logo-Alonso-Menendez-branco.png';
 import mataFinaImg from '../assets/images/mata-fina.jpg';
@@ -53,8 +52,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
         <div className="relative max-w-4xl mx-auto text-center space-y-7 py-16 z-10 px-4">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#112a20]/90 border border-[#1d4b38] text-[#d4b483] text-[10px] font-semibold uppercase tracking-[0.3em] font-sans shadow-lg animate-in fade-in slide-in-from-top-4 duration-700">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#112a20]/90 border border-[#1d4b38] text-[#d4b483] text-[10px] font-semibold uppercase tracking-[0.3em] font-sans shadow-lg animate-in fade-in slide-in-from-top-4 duration-700">
             <span>{t.brand.badge}</span>
           </div>
 
@@ -74,16 +72,15 @@ export const HomePage: React.FC<HomePageProps> = ({
             <button
               id="hero-explore-catalog-btn"
               onClick={() => { onNavigate('produtos'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="w-full sm:w-auto px-10 py-4 bg-[#d4b483] text-[#06120d] font-sans font-bold text-xs uppercase tracking-[0.3em] hover:bg-[#e2cca8] shadow-2xl transition-all flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-10 py-4 bg-[#d4b483] text-[#06120d] font-sans font-bold text-xs uppercase tracking-[0.3em] hover:bg-[#e2cca8] shadow-2xl transition-all flex items-center justify-center"
             >
               <span>{t.home.exploreCatalog}</span>
-              <ArrowRight className="w-4 h-4" />
             </button>
 
             <button
               id="hero-discover-process-btn"
               onClick={() => { onNavigate('processo'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="w-full sm:w-auto px-8 py-4 bg-[#112a20]/90 hover:bg-[#183d2e] text-[#e5d9cc] hover:text-[#d4b483] font-sans font-bold text-xs uppercase tracking-[0.3em] border border-[#1d4b38] hover:border-[#d4b483] transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 bg-[#112a20]/90 hover:bg-[#183d2e] text-[#e5d9cc] hover:text-[#d4b483] font-sans font-bold text-xs uppercase tracking-[0.3em] border border-[#1d4b38] hover:border-[#d4b483] transition-all flex items-center justify-center"
             >
               <span>{t.home.discoverProcess}</span>
             </button>
@@ -101,9 +98,23 @@ export const HomePage: React.FC<HomePageProps> = ({
           <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed mb-6">
             {t.home.premiumText1}
           </p>
-          <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed">
+          <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed mb-6">
             {t.home.premiumText2}
           </p>
+          <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed">
+            {t.home.premiumText3}
+          </p>
+        </div>
+      </section>
+
+      {/* ── FRASE EM DESTAQUE ─────────────────────────────────────── */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="relative overflow-hidden rounded-2xl bg-[#091a13] border border-[#1b4332] p-8 sm:p-12 text-center shadow-lg">
+          <div className="w-12 h-px bg-[#d4b483] mx-auto mb-6 opacity-75" />
+          <blockquote className="font-serif-luxury text-lg sm:text-2xl text-[#d4b483] italic leading-relaxed tracking-wide">
+            "{t.home.premiumQuote}"
+          </blockquote>
+          <div className="w-12 h-px bg-[#d4b483] mx-auto mt-6 opacity-75" />
         </div>
       </section>
 
@@ -129,10 +140,13 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
             <div className="flex-1 space-y-4">
               <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed">
-                {t.home.donaFlorText1a}<em className="text-[#e5d9cc]">{t.home.donaFlorText1b}</em>{t.home.donaFlorText1c}
+                {t.home.donaFlorText1}
               </p>
               <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed">
                 {t.home.donaFlorText2}
+              </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed">
+                {t.home.donaFlorText3}
               </p>
             </div>
           </div>

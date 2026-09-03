@@ -1,9 +1,17 @@
 import React, { useState, useMemo } from 'react';
 import { Language, CigarProduct } from '../types';
 import { DONA_FLOR_CIGARS, CigarProductDetail } from '../data/donaFlorCigars';
-import { ZoomIn, X, Search, Sparkles, ChevronDown, ChevronUp, Package, ShieldCheck, Star } from 'lucide-react';
+import { ZoomIn, X, Search, ChevronDown, ChevronUp, Package, ShieldCheck, Star } from 'lucide-react';
 
 const BITOLA_FILTERS = Array.from(new Set(DONA_FLOR_CIGARS.map((c) => c.specs.bitola.value.pt)));
+
+const formatRatingSource = (source?: string) => {
+  if (!source) return '';
+  const s = source.toLowerCase().trim();
+  if (s.includes('aficionado') || s.includes('afficionado')) return 'Cigar Aficionado';
+  if (s.includes('journal')) return 'Cigar Journal';
+  return source;
+};
 
 interface ProdutosPageProps {
   currentLang: Language;
@@ -75,8 +83,7 @@ export const ProdutosPage: React.FC<ProdutosPageProps> = ({ currentLang }) => {
     <div className="min-h-screen py-10 sm:py-16 px-4 sm:px-6 lg:px-8 font-sans bg-[#C4AD8A]">
       {/* Header section with title and luxury filter bar */}
       <div className="max-w-7xl mx-auto mb-12 text-center space-y-4">
-        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#0e271c] border border-[#1b4332] text-[#d4b483] text-xs uppercase tracking-[0.2em] font-medium rounded-full shadow-sm">
-          <Sparkles className="w-3.5 h-3.5 text-[#c59858]" />
+        <span className="inline-flex items-center px-3.5 py-1.5 bg-[#0e271c] border border-[#1b4332] text-[#d4b483] text-xs uppercase tracking-[0.2em] font-medium rounded-full shadow-sm">
           {currentLang === 'pt'
             ? 'Catálogo de Charutos'
             : currentLang === 'en'
@@ -280,22 +287,18 @@ export const ProdutosPage: React.FC<ProdutosPageProps> = ({ currentLang }) => {
                           id={`rating-button-${product.id}`}
                           type="button"
                           onClick={() => setRatingOpen(product)}
-                          className="inline-flex items-center gap-1.5 border border-[#caa568] px-2.5 py-1.5 bg-[#071911] rounded-lg shadow-sm shrink-0 hover:bg-[#122e20] hover:border-[#ddc68a] transition-colors cursor-pointer"
+                          className="inline-flex items-center gap-1.5 border border-[#caa568] px-2.5 py-1 bg-[#071911] rounded-lg shadow-sm shrink-0 hover:bg-[#122e20] hover:border-[#ddc68a] transition-colors cursor-pointer"
                           title={
                             currentLang === 'pt'
-                              ? 'Ver detalhamento da avaliação'
+                              ? `Avaliação ${product.rating.score} por ${formatRatingSource(product.rating.source)} - Clique para ver detalhes`
                               : currentLang === 'en'
-                              ? 'View the full rating details'
-                              : 'Ver el detalle de la valoración'
+                              ? `Rating ${product.rating.score} by ${formatRatingSource(product.rating.source)} - Click for details`
+                              : `Valoración ${product.rating.score} por ${formatRatingSource(product.rating.source)} - Clic para ver detalles`
                           }
                         >
-                          <Star className="w-3.5 h-3.5 text-[#caa568]" />
-                          <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.18em] text-[#caa568]">
-                            {currentLang === 'pt'
-                              ? 'AVALIAÇÃO'
-                              : currentLang === 'en'
-                              ? 'RATING'
-                              : 'VALORACIÓN'}
+                          <Star className="w-3.5 h-3.5 text-[#caa568] fill-[#caa568] shrink-0" />
+                          <span className="text-[10px] sm:text-[11px] font-bold tracking-wide text-[#caa568] whitespace-nowrap">
+                            {product.rating.score} • {formatRatingSource(product.rating.source)}
                           </span>
                         </button>
                       )}
@@ -592,11 +595,7 @@ export const ProdutosPage: React.FC<ProdutosPageProps> = ({ currentLang }) => {
             </h3>
 
             <p className="text-xs uppercase tracking-[0.2em] text-[#caa568] mb-6">
-              {ratingOpen.rating.source === 'cigar aficionado'
-                ? 'Cigar Aficionado'
-                : ratingOpen.rating.source === 'cigar journal'
-                ? 'Cigar Journal'
-                : ratingOpen.rating.source}
+              {formatRatingSource(ratingOpen.rating.source)}
             </p>
 
             <div className="flex items-center justify-center gap-6 mb-6">
@@ -633,7 +632,7 @@ export const ProdutosPage: React.FC<ProdutosPageProps> = ({ currentLang }) => {
                   : 'Notas Sensoriales'}
               </p>
               <p className="text-sm text-[#e5ded4] leading-relaxed italic">
-                {ratingOpen.sensoryDescription[currentLang] || ratingOpen.sensoryDescription.pt}
+                &ldquo;{ratingOpen.sensoryDescription[currentLang] || ratingOpen.sensoryDescription.pt}&rdquo;
               </p>
             </div>
           </div>

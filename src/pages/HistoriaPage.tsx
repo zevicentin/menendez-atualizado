@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import { Landmark } from 'lucide-react';
 import sedeMenendezImg from '../assets/images/sede-da-menendez-amerino.jpg';
 import arturoToranoImg from '../assets/images/arturo-torano.jpg';
 import felixMenendezImg from '../assets/images/felix-menendez-1979.jpg';
@@ -42,9 +41,8 @@ export const HistoriaPage: React.FC<HistoriaPageProps> = ({
       {/* Hero Header */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#06120d] border-b border-[#184030] text-center font-sans">
         <div className="max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
-            <Landmark className="w-3.5 h-3.5" />
-            <span>1977 — 2026</span>
+          <div className="inline-flex items-center px-3.5 py-1 bg-[#112a20] text-[#d4b483] text-[10px] font-bold uppercase tracking-[0.25em] rounded-full border border-[#1d4b38]">
+            <span>{h.heroBadge}</span>
           </div>
           <h1 className="font-serif-luxury text-3xl sm:text-5xl font-bold text-[#f5efe6] uppercase tracking-tight">
             {h.heroTitle}
