@@ -26,10 +26,10 @@ export const HomePage: React.FC<HomePageProps> = ({
       <section className="relative min-h-[85vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#06120d]">
         {/* Atmospheric Background */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40 scale-105 transition-transform duration-1000"
+          className="absolute inset-0 bg-cover bg-center opacity-60 scale-105 transition-transform duration-1000"
           style={{ backgroundImage: `url(${heroBgImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#06120d] via-[#06120d]/70 to-[#06120d]/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#06120d] via-[#06120d]/40 to-[#06120d]/55" />
         <div className="absolute inset-0 pointer-events-none opacity-40 immersive-ambient-glow" />
 
         {/* Left Heritage Marker */}

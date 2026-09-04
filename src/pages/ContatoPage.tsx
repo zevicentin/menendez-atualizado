@@ -15,6 +15,7 @@ import {
   Clock,
   ShieldCheck,
   Building,
+  MessageCircle,
 } from 'lucide-react';
 
 interface ContatoPageProps {
@@ -262,6 +263,29 @@ export const ContatoPage: React.FC<ContatoPageProps> = ({ currentLang }) => {
                   >
                     {c.headquartersPhone}
                   </a>
+                </div>
+
+                {/* WhatsApp Direct */}
+                <div className="p-4 bg-[#112a20] border border-[#1d4b38] rounded-lg space-y-1">
+                  <div className="flex items-center gap-2 font-bold text-[#d4b483]">
+                    <MessageCircle className="w-4 h-4 shrink-0" />
+                    <span>{currentLang === 'pt' ? 'WhatsApp' : currentLang === 'en' ? 'WhatsApp' : 'WhatsApp'}</span>
+                  </div>
+                  <a
+                    href="https://wa.me/17542487288"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#f5efe6] hover:text-[#d4b483] pl-6 block font-mono text-xs transition-colors"
+                  >
+                    +1 (754) 248-7288
+                  </a>
+                  <span className="text-[10px] text-[#7d968a] pl-6 block">
+                    {currentLang === 'pt'
+                      ? 'Atendimento exclusivo via WhatsApp'
+                      : currentLang === 'en'
+                      ? 'Dedicated service via WhatsApp'
+                      : 'Atención exclusiva vía WhatsApp'}
+                  </span>
                 </div>
 
                 {/* Working Hours */}

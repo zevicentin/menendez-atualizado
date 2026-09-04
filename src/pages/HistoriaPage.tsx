@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import sedeMenendezImg from '../assets/images/sede-da-menendez-amerino.jpg';
+import fabrica2Img from '../assets/images/fabrica2.jpeg';
 import arturoToranoImg from '../assets/images/arturo-torano.jpg';
 import felixMenendezImg from '../assets/images/felix-menendez-1979.jpg';
 import alonsoMenendezImg from '../assets/images/historia-alonso-menendez-marca.jpg';
 import donaFlorMarcaImg from '../assets/images/historia-dona-flor-marca.jpg';
 import portfolioImg from '../assets/images/portfolio-premium-da-menendez-amerino.jpg';
 import joseHenriqueImg from '../assets/images/jose-henrique-nunes-barreto.jpg';
-import donaFlorGran93Img from '../assets/images/Dona-Flor-Gran-93.jpg';
+import gran932Img from '../assets/images/gran932.png';
 import donaFlorMundoImg from '../assets/images/dona-flor-ganha-o-mundo.jpg';
 
 interface HistoriaPageProps {
@@ -25,14 +25,14 @@ export const HistoriaPage: React.FC<HistoriaPageProps> = ({
   const h = t.historia;
 
   const milestoneImages = [
-    sedeMenendezImg,
+    fabrica2Img,
     arturoToranoImg,
     felixMenendezImg,
     alonsoMenendezImg,
     donaFlorMarcaImg,
     portfolioImg,
     joseHenriqueImg,
-    donaFlorGran93Img,
+    gran932Img,
     donaFlorMundoImg,
   ];
 

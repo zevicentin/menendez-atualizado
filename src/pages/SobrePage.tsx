@@ -4,7 +4,7 @@ import { TRANSLATIONS } from '../i18n/translations';
 import mataNorteImg from '../assets/images/mata-norte.jpg';
 import galpoesImg from '../assets/images/galpoes.jpeg';
 import marcenariaImg from '../assets/images/marcenaria.jpg';
-import mercadoImg from '../assets/images/mercado.jpg';
+import duplaImg from '../assets/images/dupla.jpg';
 import solarImg from '../assets/images/solar.jpeg';
 
 interface SobrePageProps {
@@ -128,7 +128,7 @@ export const SobrePage: React.FC<SobrePageProps> = ({
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <img
-                  src={mercadoImg}
+                  src={duplaImg}
                   alt={s.mercadoImgAlt}
                   className="w-full h-44 md:h-full object-cover rounded-lg border border-[#1d4b38]"
                 />

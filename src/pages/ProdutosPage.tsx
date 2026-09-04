@@ -101,7 +101,7 @@ export const ProdutosPage: React.FC<ProdutosPageProps> = ({ currentLang }) => {
 
         <p className="text-sm sm:text-base text-[#3d2b1a] max-w-3xl mx-auto font-light leading-relaxed">
           {currentLang === 'pt'
-            ? 'Conheça cada bitola manufaturada à mão com tabacos nobres do Recôncavo Baiano, suas notas sensoriais e especificações técnicas.'
+            ? 'Conheça cada bitola manufaturada com tabacos nobres do Recôncavo Baiano, suas notas sensoriais e especificações técnicas.'
             : currentLang === 'en'
             ? 'Discover each handmade vitola crafted with noble tobaccos from the Recôncavo Baiano, complete with sensory notes and technical specifications.'
             : 'Conozca cada vitola elaborada a mano con tabacos nobles del Recôncavo Baiano, sus notas sensoriales y especificaciones técnicas.'}

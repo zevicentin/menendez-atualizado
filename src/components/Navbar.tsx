@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import { Logo } from './Logo';
 import { Globe, Menu, X, Instagram, Linkedin, Youtube, Facebook, BookOpen, ShieldCheck } from 'lucide-react';
+import menendezLogo from '../assets/images/logo-menendez.svg';
 
 interface NavbarProps {
   currentLang: Language;
@@ -132,7 +132,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           onClick={() => handleNavClick('home')}
           className="flex items-center gap-3 text-left group focus:outline-none transition-transform hover:scale-[1.01] shrink-0 mr-4 lg:mr-8 xl:mr-12"
         >
-          <Logo size="md" textColor="#d4b483" accentColor="#c59b4c" />
+          <img
+            src={menendezLogo}
+            alt="Menendez Amerino"
+            className="h-10 w-auto object-contain"
+          />
         </button>
 
         {/* Desktop Navigation Links */}

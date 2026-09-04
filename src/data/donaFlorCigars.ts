@@ -11,7 +11,7 @@ import cigarDfSelecao from '../assets/images/dona-flor-selecao.png';
 import cigarDfReservaEspecial from '../assets/images/dona-flor-reserva-especial.png';
 import cigarDfRothschild from '../assets/images/dona_flor_rothschild.png';
 import cigarDfPiramide from '../assets/images/dona-flor-piramide.png';
-import cigarDfGraduado from '../assets/images/dona_flor_graduado.png';
+import cigarDfGraduado from '../assets/images/graduado2.png';
 import cigarDfGran93 from '../assets/images/dona-flor-gran-93.png';
 import cigarDfRuby from '../assets/images/dona-flor-ruby.png';
 import cigarDfBlack from '../assets/images/dona-flor-black.png';

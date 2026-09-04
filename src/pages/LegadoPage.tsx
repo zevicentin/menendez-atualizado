@@ -7,6 +7,7 @@ import aprendizesImg from '../assets/images/aprendizes.jpeg';
 import laboralImg from '../assets/images/laboral.jpeg';
 import psicologaImg from '../assets/images/psicologa.jpeg';
 import segurancaImg from '../assets/images/seguranca.jpeg';
+import socialImg from '../assets/images/social.jpeg';
 
 interface LegadoPageProps {
   currentLang: Language;
@@ -92,6 +93,33 @@ export const LegadoPage: React.FC<LegadoPageProps> = ({
               </p>
               <p className="text-sm sm:text-base text-[#c5b8aa] leading-relaxed font-light">
                 {leg.mataP4}
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#091a13] border border-[#1b4332] rounded-2xl p-6 sm:p-8 shadow-xl">
+            <h2 className="font-serif-luxury text-xl sm:text-2xl font-bold text-[#f5efe6] uppercase tracking-wide text-center mb-5">
+              {leg.roleHeading}
+            </h2>
+
+            <img
+              src={socialImg}
+              alt="Responsabilidade Social"
+              className="w-full h-72 object-cover rounded-lg border border-[#1b4332] mb-5"
+            />
+
+            <div className="space-y-4">
+              <p className="text-sm sm:text-base text-[#c5b8aa] leading-relaxed font-light">
+                {leg.roleDesc1}
+              </p>
+              <p className="text-sm sm:text-base text-[#c5b8aa] leading-relaxed font-light">
+                {leg.roleDesc2}
+              </p>
+              <p className="text-sm sm:text-base text-[#c5b8aa] leading-relaxed font-light">
+                {leg.roleDesc3}
+              </p>
+              <p className="text-sm sm:text-base text-[#c5b8aa] leading-relaxed font-light">
+                {leg.roleDesc4}
               </p>
             </div>
           </div>

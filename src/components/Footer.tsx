@@ -1,8 +1,8 @@
 import React from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import { Logo } from './Logo';
-import { Instagram, Linkedin, Youtube, Facebook, BookOpen, ShieldAlert, Sparkles, Cookie, Phone, Mail, MapPin } from 'lucide-react';
+import { Instagram, Linkedin, Youtube, Facebook, BookOpen, ShieldAlert, Sparkles, Cookie, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
+import menendezLogo from '../assets/images/logo-menendez.svg';
 
 interface FooterProps {
   currentLang: Language;
@@ -30,7 +30,11 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Col 1: Brand & Manifesto */}
           <div className="space-y-4">
             <div className="flex flex-col items-start gap-1">
-              <Logo size="md" textColor="#d4b483" accentColor="#c59b4c" />
+              <img
+                src={menendezLogo}
+                alt="Menendez Amerino"
+                className="h-10 w-auto object-contain"
+              />
               <span className="text-[9px] uppercase tracking-[0.25em] text-[#8a9e93] mt-1 font-sans">
                 Manufatura de Tabacos Nobres • Bahia
               </span>
@@ -216,6 +220,20 @@ export const Footer: React.FC<FooterProps> = ({
               <div className="flex items-start gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#d4b483] shrink-0 mt-0.5" />
                 <span>+55 75 3246.1181</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <MessageCircle className="w-3.5 h-3.5 text-[#d4b483] shrink-0 mt-0.5" />
+                <a
+                  href="https://wa.me/17542487288"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#d4b483] transition-colors"
+                >
+                  +1 (754) 248-7288
+                  <span className="block text-[10px] text-[#8a9e93]">
+                    {currentLang === 'pt' ? 'WhatsApp' : currentLang === 'en' ? 'WhatsApp' : 'WhatsApp'}
+                  </span>
+                </a>
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#d4b483] shrink-0 mt-0.5" />
