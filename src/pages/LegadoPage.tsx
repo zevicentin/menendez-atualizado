@@ -7,7 +7,7 @@ import aprendizesImg from '../assets/images/aprendizes.jpeg';
 import laboralImg from '../assets/images/laboral.jpeg';
 import psicologaImg from '../assets/images/psicologa.jpeg';
 import segurancaImg from '../assets/images/seguranca.jpeg';
-import socialImg from '../assets/images/social.jpeg';
+import socialImg from '../assets/images/social2.jpeg';
 
 interface LegadoPageProps {
   currentLang: Language;
