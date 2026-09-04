@@ -4,7 +4,7 @@ import { TRANSLATIONS } from '../i18n/translations';
 import mataNorteImg from '../assets/images/mata-norte.jpg';
 import galpoesImg from '../assets/images/galpoes.jpeg';
 import marcenariaImg from '../assets/images/marcenaria.jpg';
-import duplaImg from '../assets/images/dupla.jpg';
+import duplaImg from '../assets/images/dupla.jpeg';
 import solarImg from '../assets/images/solar.jpeg';
 
 interface SobrePageProps {
