@@ -1,10 +1,11 @@
 import React from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import plantioImg from '../assets/images/plantio.jpg';
-import estruturaImg from '../assets/images/estrutura.jpg';
+import mataNorteImg from '../assets/images/mata-norte.jpg';
+import galpoesImg from '../assets/images/galpoes.jpeg';
 import marcenariaImg from '../assets/images/marcenaria.jpg';
 import mercadoImg from '../assets/images/mercado.jpg';
+import solarImg from '../assets/images/solar.jpeg';
 
 interface SobrePageProps {
   currentLang: Language;
@@ -62,7 +63,14 @@ export const SobrePage: React.FC<SobrePageProps> = ({
           </div>
 
           <div className="space-y-6">
-            <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="flex flex-col md:flex-row-reverse gap-6 items-center">
+              <div className="w-full md:w-1/3 flex-shrink-0">
+                <img
+                  src={mataNorteImg}
+                  alt={s.plantioImgAlt}
+                  className="w-full h-56 md:h-full object-cover rounded-lg border border-[#1d4b38]"
+                />
+              </div>
               <div className="space-y-4 flex-1">
                 <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
                   {s.structureIntro1}
@@ -70,25 +78,18 @@ export const SobrePage: React.FC<SobrePageProps> = ({
                 <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
                   {s.structureIntro2}
                 </p>
-                <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
-                  {s.structureIntro3}
-                </p>
-                <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
-                  {s.structureIntro4}
-                </p>
-              </div>
-              <div className="w-full md:w-1/3 flex-shrink-0">
-                <img
-                  src={plantioImg}
-                  alt={s.plantioImgAlt}
-                  className="w-full h-56 md:h-full object-cover rounded-lg border border-[#1d4b38]"
-                />
               </div>
             </div>
+            <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+              {s.structureIntro3}
+            </p>
+            <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
+              {s.structureIntro4}
+            </p>
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0">
                 <img
-                  src={estruturaImg}
+                  src={galpoesImg}
                   alt={s.estruturaImgAlt}
                   className="w-full h-44 md:h-full object-cover rounded-lg border border-[#1d4b38]"
                 />
@@ -97,8 +98,20 @@ export const SobrePage: React.FC<SobrePageProps> = ({
                 {s.structureText1}
               </p>
             </div>
+            <div className="flex flex-col md:flex-row-reverse gap-6 items-center">
+              <div className="w-full md:w-1/3 flex-shrink-0">
+                <img
+                  src={solarImg}
+                  alt="Energia solar"
+                  className="w-full h-44 md:h-full object-cover rounded-lg border border-[#1d4b38]"
+                />
+              </div>
+              <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light flex-1">
+                {s.solarEnergyText1}
+              </p>
+            </div>
             <p className="text-xs sm:text-sm text-[#c5b8aa] leading-relaxed font-light">
-              {s.solarEnergyText}
+              {s.solarEnergyText2}
             </p>
             <div className="flex flex-col md:flex-row-reverse gap-6 items-center">
               <div className="w-full md:w-1/3 flex-shrink-0">

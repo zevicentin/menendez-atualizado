@@ -1,11 +1,14 @@
 import React from 'react';
 import { Language, PageId } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import preparacaoSolo from '../assets/images/preparacao-solo.jpg';
-import germinacao from '../assets/images/germinacao.jpg';
-import secagem from '../assets/images/secagem.jpg';
-import processamento from '../assets/images/processamento.jpg';
-import construcao from '../assets/images/construcao.jpg';
+import preparacaoSolo from '../assets/images/perfil.jpeg';
+import germinacao from '../assets/images/germinacao.jpeg';
+import secagem from '../assets/images/colheita.jpeg';
+import processamento from '../assets/images/beneficiamento.jpeg';
+import construcao from '../assets/images/construcao.jpeg';
+import cromaticaImg from '../assets/images/cromatica.jpeg';
+import terminacaoImg from '../assets/images/terminacao.jpeg';
+import caixasImg from '../assets/images/caixas.jpeg';
 
 interface ProcessoPageProps {
   currentLang: Language;
@@ -83,7 +86,7 @@ export const ProcessoPage: React.FC<ProcessoPageProps> = ({
               <img
                 src={germinacao}
                 alt={p.s2ImgAlt}
-                className="w-full md:w-1/3 h-44 md:h-auto md:self-stretch object-cover rounded-lg border border-[#1d4b38]"
+                className="w-full md:w-1/3 aspect-square md:self-start object-cover rounded-lg border border-[#1d4b38]"
               />
             </div>
           </div>
@@ -203,15 +206,42 @@ export const ProcessoPage: React.FC<ProcessoPageProps> = ({
             <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed">
               <span className="font-bold">{p.s7Label1}</span> {p.s7Text1}
             </p>
-            <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed">
-              <span className="font-bold">{p.s7Label2}</span> {p.s7Text2}
-            </p>
-            <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed">
-              <span className="font-bold">{p.s7Label3}</span> {p.s7Text3}
-            </p>
-            <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed">
-              <span className="font-bold">{p.s7Label4}</span> {p.s7Text4}
-            </p>
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="w-full md:w-1/6 flex-shrink-0">
+                <img
+                  src={cromaticaImg}
+                  alt="Classificação cromática"
+                  className="w-full aspect-square object-cover rounded-lg border border-[#8e7552]"
+                />
+              </div>
+              <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed flex-1">
+                <span className="font-bold">{p.s7Label2}</span> {p.s7Text2}
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="w-full md:w-1/6 flex-shrink-0">
+                <img
+                  src={terminacaoImg}
+                  alt="Terminação"
+                  className="w-full aspect-square object-cover rounded-lg border border-[#8e7552]"
+                />
+              </div>
+              <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed flex-1">
+                <span className="font-bold">{p.s7Label3}</span> {p.s7Text3}
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="w-full md:w-1/6 flex-shrink-0">
+                <img
+                  src={caixasImg}
+                  alt="Confecção das caixas"
+                  className="w-full aspect-square object-cover rounded-lg border border-[#8e7552]"
+                />
+              </div>
+              <p className="font-sans text-sm sm:text-base text-[#3d2b1a] leading-relaxed flex-1">
+                <span className="font-bold">{p.s7Label4}</span> {p.s7Text4}
+              </p>
+            </div>
           </div>
         </section>
       </div>

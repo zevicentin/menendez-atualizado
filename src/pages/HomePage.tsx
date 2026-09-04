@@ -1,7 +1,7 @@
 import React from 'react';
 import { Language, PageId, CigarProduct } from '../types';
 import { TRANSLATIONS } from '../i18n/translations';
-import heroBgImage from '../assets/images/hero-cigars.jpg';
+import heroBgImage from '../assets/images/hero.jpeg';
 import donaFlorLogo from '../assets/images/Dona-Flor-Logo.png';
 import alonsoMenendezLogo from '../assets/images/logo-Alonso-Menendez-branco.png';
 import mataFinaImg from '../assets/images/mata-fina.jpg';
@@ -199,16 +199,49 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
             <div className="p-6">
-              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
-                {t.home.mataFinaText}
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4 font-semibold text-[#d4b483] uppercase tracking-wide">
+                {t.home.mataFinaSubtitle}
               </p>
-              <div className="pt-4 border-t border-[#143324]">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
-                  {t.home.mataFinaLocationsLabel}
-                </span>
-                <p className="font-sans text-xs text-[#a09585] leading-relaxed">
-                  {t.home.mataFinaLocations}
-                </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
+                {t.home.mataFinaText1}
+              </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
+                {t.home.mataFinaText2}
+              </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
+                {t.home.mataFinaText3}
+              </p>
+              <div className="space-y-4 pt-4 border-t border-[#143324]">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
+                    {t.home.mataProfileLabel}:
+                  </span>
+                  <ul className="space-y-1 font-sans text-xs text-[#a09585] leading-relaxed">
+                    {t.home.mataFinaProfile.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
+                    {t.home.mataLeafLabel}:
+                  </span>
+                  <ul className="space-y-1 font-sans text-xs text-[#a09585] leading-relaxed">
+                    {t.home.mataFinaLeaf.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
+                    {t.home.mataHighlightLabel}:
+                  </span>
+                  <ul className="space-y-1 font-sans text-xs text-[#a09585] leading-relaxed">
+                    {t.home.mataFinaHighlight.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -228,16 +261,49 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
             <div className="p-6">
-              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
-                {t.home.mataNorteText}
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4 font-semibold text-[#d4b483] uppercase tracking-wide">
+                {t.home.mataNorteSubtitle}
               </p>
-              <div className="pt-4 border-t border-[#143324]">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
-                  {t.home.mataNorteLocationsLabel}
-                </span>
-                <p className="font-sans text-xs text-[#a09585] leading-relaxed">
-                  {t.home.mataNorteLocations}
-                </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
+                {t.home.mataNorteText1}
+              </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
+                {t.home.mataNorteText2}
+              </p>
+              <p className="font-sans text-sm text-[#c5b8aa] leading-relaxed mb-4">
+                {t.home.mataNorteText3}
+              </p>
+              <div className="space-y-4 pt-4 border-t border-[#143324]">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
+                    {t.home.mataProfileLabel}:
+                  </span>
+                  <ul className="space-y-1 font-sans text-xs text-[#a09585] leading-relaxed">
+                    {t.home.mataNorteProfile.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
+                    {t.home.mataLeafLabel}:
+                  </span>
+                  <ul className="space-y-1 font-sans text-xs text-[#a09585] leading-relaxed">
+                    {t.home.mataNorteLeaf.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#7d968a] font-sans font-semibold block mb-2">
+                    {t.home.mataHighlightLabel}:
+                  </span>
+                  <ul className="space-y-1 font-sans text-xs text-[#a09585] leading-relaxed">
+                    {t.home.mataNorteHighlight.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
