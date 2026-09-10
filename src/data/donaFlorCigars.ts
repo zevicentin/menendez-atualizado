@@ -394,7 +394,7 @@ export const DONA_FLOR_CIGARS: CigarProductDetail[] = [
       },
       fortaleza: {
         label: { pt: 'Fortaleza', en: 'Strength', es: 'Fortaleza' },
-        value: { pt: 'Forte', en: 'Full', es: 'Fuerte' },
+        value: { pt: 'Médio Mais', en: 'Medium Plus', es: 'Medio Más' },
       },
       capa: {
         label: { pt: 'Capa', en: 'Wrapper', es: 'Capa' },
@@ -806,7 +806,7 @@ export const DONA_FLOR_CIGARS: CigarProductDetail[] = [
       },
       fortaleza: {
         label: { pt: 'Fortaleza', en: 'Strength', es: 'Fortaleza' },
-        value: { pt: 'Forte', en: 'Full', es: 'Fuerte' },
+        value: { pt: 'Médio Mais', en: 'Medium Plus', es: 'Medio Más' },
       },
       capa: {
         label: { pt: 'Capa', en: 'Wrapper', es: 'Capa' },
